@@ -30,7 +30,7 @@ var hourNormal = 12 - process.env.TIMEZONE_OFFSET,
 
 var job = schedule.scheduleJob('0 0 ' + hourNormal + '-' + hourDST + ' * * 1-5', function() {
 
-    if(moment().tz(process.env.TIMEZONE).hour() === 12)
+    if(moment().tz(process.env.TIMEZONE).hour() === 12) {
         chatter.poke(bot);
     }
 });
