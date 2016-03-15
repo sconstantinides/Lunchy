@@ -3,6 +3,7 @@ if (!process.env.NODE_ENV) require('dotenv').config(); // development env vars
 var express = require('express'),
     botkit = require('botkit'),
     schedule = require('node-schedule'),
+    moment = require('moment-timezone'),
     chatter = require('./modules/chatter'),
     recommender = require('./modules/recommender'),
     reacter = require('./modules/reacter'),
@@ -22,10 +23,16 @@ bot.startRTM(function(err) {
     if (err) throw err;
 });
 
-// DAILY POKE - runs M-F at 12 noon CST
+// DAILY POKE - runs M-F at 12 noon
 
-var job = schedule.scheduleJob('0 0 18 * * 1-5', function() {
-    chatter.poke(bot);
+var hourNormal = 12 - process.env.TIMEZONE_OFFSET,
+    hourDST = hourNormal + 1;
+
+var job = schedule.scheduleJob('0 0 ' + hourNormal + '-' + hourDST + ' * * 1-5', function() {
+
+    if(moment().tz(process.env.TIMEZONE).hour() === 12)
+        chatter.poke(bot);
+    }
 });
 
 // EVENTS

@@ -33,7 +33,7 @@ var Recommender = function() {
             sendSuggestion(bot, channel, selection, message);
 
             db.updateRestaurant(selection.id, {
-                last_rec: moment().tz('America/Chicago').format('lll'),
+                last_rec: moment().tz(process.env.TIMEZONE).format('lll'),
                 num_recs: selection.num_recs + 1
             });
         });
@@ -71,8 +71,8 @@ var Recommender = function() {
     function sortOldToNew(restaurants) {
 
         return _.sortBy(restaurants, function(restaurant) {
-            if (!restaurant.last_rec) return moment().tz('America/Chicago').subtract(1, 'years');
-            return moment.tz(restaurant.last_rec, 'lll', 'America/Chicago');
+            if (!restaurant.last_rec) return moment().tz(process.env.TIMEZONE).subtract(1, 'years');
+            return moment.tz(restaurant.last_rec, 'lll', process.env.TIMEZONE);
         });
     }
 

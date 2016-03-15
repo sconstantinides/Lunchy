@@ -17,5 +17,7 @@
 - DB_PW - for Fieldbook
 - DB_USER - for Fieldbook
 - FORECAST_TOKEN - for Forecast.io
+- TIMEZONE - e.g. "America/Chicago"
+- TIMEZONE_OFFSET - without DST, e.g. "-6"
 
 :hamburger: :pizza: :hamburger: :pizza: :hamburger: :pizza: :hamburger: :pizza: :hamburger: :pizza: :hamburger: :pizza: :hamburger: :pizza: :hamburger: :pizza: :hamburger: :pizza: :hamburger: :pizza: :hamburger: :pizza: :hamburger: :pizza: :hamburger: :pizza: :hamburger: :pizza: :hamburger: :pizza: :hamburger: :pizza: :hamburger: :pizza: :hamburger:
