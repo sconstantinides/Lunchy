@@ -28,7 +28,7 @@ bot.startRTM(function(err) {
 var hourNormal = 12 - process.env.TIMEZONE_OFFSET,
     hourDST = hourNormal - 1;
 
-var job = schedule.scheduleJob('0 0 ' + hourDST + '-' + hourNormal + ' * * 1-5', function() {
+var job = schedule.scheduleJob('0 0 ' + hourDST + ',' + hourNormal + ' * * 1-5', function() {
 
     if(moment().tz(process.env.TIMEZONE).hour() === 12) {
         chatter.poke(bot);
