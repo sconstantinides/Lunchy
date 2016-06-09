@@ -19,10 +19,6 @@ var bot = controller.spawn({
     token: process.env.BOT_TOKEN
 });
 
-bot.startRTM(function(err) {
-    if (err) throw err;
-});
-
 // DAILY POKE - runs M-F at 12 noon
 
 var hourNormal = 12 - process.env.TIMEZONE_OFFSET,
@@ -31,7 +27,13 @@ var hourNormal = 12 - process.env.TIMEZONE_OFFSET,
 var job = schedule.scheduleJob('0 0 ' + hourDST + ',' + hourNormal + ' * * 1-5', function() {
 
     if(moment().tz(process.env.TIMEZONE).hour() === 12) {
-        chatter.poke(bot);
+
+        bot.closeRTM();
+
+        bot.startRTM(function(err) {
+            if (err) throw err;
+            chatter.poke(bot);
+        });
     }
 });
 
