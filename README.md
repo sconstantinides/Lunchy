@@ -1,4 +1,4 @@
-:hamburger: :pizza: :hamburger: :pizza: :hamburger: :pizza: :hamburger: :pizza: :hamburger: :pizza: :hamburger: :pizza: :hamburger: :pizza: :hamburger: :pizza: :hamburger: :pizza: :hamburger: :pizza: :hamburger: :pizza: :hamburger: :pizza: :hamburger: :pizza: :hamburger: :pizza: :hamburger: :pizza: :hamburger: :pizza: :hamburger: :pizza: :hamburger:
+:hamburger: :pizza: :hamburger: :pizza: :hamburger: :pizza: :hamburger: :pizza: :hamburger: :pizza: :hamburger: :pizza: :hamburger: :pizza: :hamburger: :pizza: :hamburger: :pizza: :hamburger: :pizza: :hamburger: :pizza: :hamburger: :pizza: :hamburger: :pizza: :hamburger: :pizza: :hamburger: :pizza: :hamburger: :pizza:
 
 ### Running Lunchy locally
 - create a ".env" file in the root with the below enviroment vars
@@ -20,4 +20,4 @@
 - TIMEZONE - e.g. "America/Chicago"
 - TIMEZONE_OFFSET - without DST, e.g. "-6"
 
-:hamburger: :pizza: :hamburger: :pizza: :hamburger: :pizza: :hamburger: :pizza: :hamburger: :pizza: :hamburger: :pizza: :hamburger: :pizza: :hamburger: :pizza: :hamburger: :pizza: :hamburger: :pizza: :hamburger: :pizza: :hamburger: :pizza: :hamburger: :pizza: :hamburger: :pizza: :hamburger: :pizza: :hamburger: :pizza: :hamburger: :pizza: :hamburger:
+:hamburger: :pizza: :hamburger: :pizza: :hamburger: :pizza: :hamburger: :pizza: :hamburger: :pizza: :hamburger: :pizza: :hamburger: :pizza: :hamburger: :pizza: :hamburger: :pizza: :hamburger: :pizza: :hamburger: :pizza: :hamburger: :pizza: :hamburger: :pizza: :hamburger: :pizza: :hamburger: :pizza: :hamburger: :pizza:
